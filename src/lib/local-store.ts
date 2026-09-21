@@ -117,3 +117,7 @@ export const localInsertContactMessage = async (data: any) => {
   }
   return true;
 };
+export const localGetContactMessages = async () => {
+  const store = await getStore();
+  return store.contactMessages || [];
+};
